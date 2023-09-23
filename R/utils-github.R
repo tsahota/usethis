@@ -128,8 +128,8 @@ github_remote_list <- function(these = c("origin", "upstream"), x = NULL) {
 
   parsed <- parse_github_remotes(set_names(x$url, x$name))
   # TODO: generalize here for GHE hosts that don't include 'github'
-  is_github <- grepl("github", parsed$host)
-  parsed <- parsed[is_github, ]
+  #is_github <- grepl("github", parsed$host)
+  #parsed <- parsed[is_github, ]
 
   parsed$remote <- parsed$name
   parsed$host_url <- glue_chr("https://{parsed$host}")
